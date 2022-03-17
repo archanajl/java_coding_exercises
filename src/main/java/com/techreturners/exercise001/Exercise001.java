@@ -5,23 +5,19 @@ import java.util.Locale;
 
 public class Exercise001 {
     public String capitalizeWord(String word) {
-        // Add your code here
         return word.substring(0,1).toUpperCase() + word.substring(1);
     }
 
     public String generateInitials(String firstName, String lastName) {
-        // Add your code here
         return firstName.substring(0,1) + '.' +  lastName.charAt(0);
     }
 
     public double addVat(double originalPrice, double vatRate) {
-        // Add your code here
         double calculatedVat = ((vatRate/100) * originalPrice)  + originalPrice;
         return Math.floor(calculatedVat * 100)/100;
     }
 
     public String reverse(String sentence) {
-        // Add your code here
 
         StringBuilder reverseSentence = new StringBuilder();
 
@@ -38,13 +34,12 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        // Add your code here
+
         int count = 0;
             for (User i: users){
             if (i.getType().equals("Linux")){
                 count++;
             }
-
         }
         return count;
     }

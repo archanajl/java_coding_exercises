@@ -10,8 +10,8 @@ import java.time.format.DateTimeParseException;
 public class Exercise004 {
 
     final LocalDateTime date_value;
+    private final int GIGA_SECONDS = 1000000000;
     public static final DateTimeFormatter FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd.HH:mm:ss");
-
 
     public Exercise004(LocalDate date) {
         this.date_value = LocalDateTime.of(date, LocalTime.MIDNIGHT);
@@ -30,6 +30,6 @@ public class Exercise004 {
     }
 
     public LocalDateTime getDateTime() {
-        return this.date_value.plusSeconds(1000000000);
+        return this.date_value.plusSeconds(GIGA_SECONDS);
     }
 }

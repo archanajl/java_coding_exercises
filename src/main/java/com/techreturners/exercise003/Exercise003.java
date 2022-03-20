@@ -6,7 +6,6 @@ import java.util.List;
 
 public class Exercise003 {
     final List<String> iceCream = new ArrayList<>();
-    private String iceCreamFlavour;
 
     public Exercise003(){
         this.iceCream.add("Pistachio") ;

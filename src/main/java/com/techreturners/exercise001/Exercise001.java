@@ -18,26 +18,15 @@ public class Exercise001 {
     }
 
     public String reverse(String sentence) {
-
         StringBuilder reverseSentence = new StringBuilder();
-
-        String[] words = sentence.split("\\s+");
-        for (int i = words.length - 1 ; i >= 0; i--){
-            for (int j = words[i].length() - 1 ; j >= 0; j--) {
-                reverseSentence.append(words[i].charAt(j));
-            }
-            if (i != 0){
-                reverseSentence.append(" ");
-            }
-        }
-        return reverseSentence.toString();
+        reverseSentence.append(sentence);
+        return reverseSentence.reverse().toString();
     }
 
     public int countLinuxUsers(List<User> users) {
-
         int count = 0;
-            for (User i: users){
-            if (i.getType().equals("Linux")){
+        for (User user: users){
+            if (user.getType().equals("Linux")){
                 count++;
             }
         }
